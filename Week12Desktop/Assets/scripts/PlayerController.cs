@@ -44,9 +44,8 @@ public class PlayerController : MonoBehaviour
     //필요한 컴포넌트
     [SerializeField]
     private Camera theCamera;
-
-    private Rigidbody myRigid; 
-    // Start is called before the first frame update
+    private Rigidbody myRigid;
+    private GunController theGunController;
     void Start()
     {
         applySpeed = walkSpeed;
@@ -54,6 +53,7 @@ public class PlayerController : MonoBehaviour
         capsuleCollider = GetComponent<CapsuleCollider>();
         originPosY = theCamera.transform.localPosition.y;
         applyCrouchPosY = originPosY;
+        theGunController = FindObjectOfType<GunController>();
     }
 
     // Update is called once per frame
@@ -147,6 +147,13 @@ public class PlayerController : MonoBehaviour
     //달리기 실행
     private void Runing()
     {
+        if (isCrouch)
+            Crouch();
+
+        theGunController.CancelFineSight();
+        
+
+        
         isRun = true;
         applySpeed = runSpeed;
     }
