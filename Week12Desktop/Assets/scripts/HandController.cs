@@ -2,93 +2,33 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class  HandController : MonoBehaviour
+public class  HandController : CloseWeaponController
 {
+
     //활성화 여부
     public static bool isActivate = false;
 
-    //현재 장착된 Hand형 타입 무기
-    [SerializeField]
-    private Hand currentHand;
-
-    //공격중?
-    private bool isAttack = false;
-    private bool isSwing = false;
-
-    private RaycastHit hitInfo;
-    
-    
     void Update()
     {
         if (isActivate == true)
             TryAttack();
 
     }
-    private void TryAttack()
+    protected override IEnumerator HitCoroutine()
     {
-        if (Input.GetButton("Fire1"))
+        while (isSwing)
         {
-            if (!isAttack)
+            if (CheckObject())
             {
-                StartCoroutine(AttackCoroutine()); 
-
+                isSwing = false;
+                Debug.Log(hitInfo.transform.name);
             }
-        }
-
-        IEnumerator AttackCoroutine()
-        {
-            isAttack = true;
-            currentHand.anim.SetTrigger("Attack");
-
-            yield return new WaitForSeconds(currentHand.attackDelayA);
-            isSwing = true;
-
-            StartCoroutine(HitCoroutine());
-
-            yield return new WaitForSeconds(currentHand.attackDelayB);
-            isSwing = false;
-
-            yield return new WaitForSeconds(currentHand.attackDelay - currentHand.attackDelayA - currentHand.attackDelayB);
-
-
-            isAttack = false;
-        }
-
-        IEnumerator HitCoroutine()
-        {
-            while (isSwing)
-            {
-                if (CheckObject())
-                {
-                    isSwing = false;
-                    Debug.Log(hitInfo.transform.name);
-                }
-                yield return null;
-            }
+            yield return null;
         }
     }
-    private bool CheckObject()
+    public override void CloseWeaponChange(CloseWeapon _closeWeapon)
     {
-        if(Physics.Raycast(transform.position, transform.forward, out hitInfo, currentHand.range))
-        {
-            return true;
-        }
-        return false;
-    }
-
-
-    public void HandChange(Hand _hand)
-    {
-        if (weaponManager.currentWeapon != null)
-            weaponManager.currentWeapon.gameObject.SetActive(false);
-
-        currentHand = _hand;
-        weaponManager.currentWeapon = currentHand.GetComponent<Transform>();
-        weaponManager.currentWeaponAnim = currentHand.anim;
-
-        currentHand.transform.localPosition = Vector3.zero;
-        currentHand.gameObject.SetActive(true);
+        base.CloseWeaponChange(_closeWeapon);
         isActivate = true;
-
     }
 }
