@@ -16,11 +16,12 @@ public class Slot : MonoBehaviour, IPointerClickHandler, IBeginDragHandler, IDra
     [SerializeField]
     private GameObject go_CountImage;
 
-    private weaponManager theWeaponManager;
+    private ItemEffectDataBase theItemEffectDatabase;
+    
 
     void Start()
     {
-        theWeaponManager = FindObjectOfType<weaponManager>();
+        theItemEffectDatabase = FindObjectOfType<ItemEffectDataBase>();
     }
 
     //이미지 투명도 조절
@@ -83,18 +84,15 @@ public class Slot : MonoBehaviour, IPointerClickHandler, IBeginDragHandler, IDra
         {
             if(item != null)
             {
-                if(item.itemType == Item.ItemType.Equipment)
-                {
-                    StartCoroutine(theWeaponManager.ChangeWeaponCoroutine(item.weaponType, item.itemName));
-                }
-                else
-                {
-                    Debug.Log(item.itemName + "을 사용했습니다");
+                 theItemEffectDatabase.UseItem(item);
+                
+                if(item.itemType == Item.ItemType.Used)
                     SetSlotCount(-1);
-                }
             }
         }
-    }
+
+    
+    }   
 
     public void OnBeginDrag(PointerEventData eventData)
     {
@@ -129,7 +127,6 @@ public class Slot : MonoBehaviour, IPointerClickHandler, IBeginDragHandler, IDra
 
         if (DragSlot.instance.dragSlot != null)
             ChangeSlot();
-
     }
 
     private void ChangeSlot()
@@ -143,6 +140,5 @@ public class Slot : MonoBehaviour, IPointerClickHandler, IBeginDragHandler, IDra
             DragSlot.instance.dragSlot.AddItem(_tempItem, _tempItemCount);
         else
             DragSlot.instance.dragSlot.ClearSlot();
-        
     }
 }
