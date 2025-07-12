@@ -8,7 +8,7 @@ public class Rock : MonoBehaviour
     private int hp; //바위 체력
 
     [SerializeField]
-    private float destoryTime; //파편 제거 시간
+    private float destroyTime; //파편 제거 시간
 
     [SerializeField]
     private SphereCollider col; //구체 콜라이더
@@ -21,20 +21,17 @@ public class Rock : MonoBehaviour
     [SerializeField]
     private GameObject go_effect_prefebs; //채굴 이펙트
 
+    //필요한 사운드 이름
     [SerializeField]
-    private AudioSource audioSource;
+    private string strike_Sound;
     [SerializeField]
-    private AudioClip effect_sound;
-    [SerializeField]
-    private AudioClip effect_sound2;
-
+    private string destroy_Sound;
 
     public void Mining()
     {
-        audioSource.clip = effect_sound;
-        audioSource.Play();
+        SoundManager.instance.PlaySE(strike_Sound);
         var clone = Instantiate(go_effect_prefebs, col.bounds.center, Quaternion.identity);
-        Destroy(clone, destoryTime);
+        Destroy(clone, destroyTime);
 
         hp--;
         if(hp <= 0)
@@ -45,12 +42,11 @@ public class Rock : MonoBehaviour
     
     private void Destruction()
     {
-        audioSource.clip = effect_sound;
-        audioSource.Play();
+        SoundManager.instance.PlaySE(destroy_Sound);
 
         col.enabled = false;
         Destroy(go_rock);
         go_debris.SetActive(true);
-        Destroy(go_debris, destoryTime); 
+        Destroy(go_debris, destroyTime); 
     }
 }
