@@ -76,9 +76,12 @@ public class PlayerController : MonoBehaviour
         TryRun();
         TryCrouch();
         Move();
-        CameraRotation();
-        CharacterRotation();
         MoveCheck();
+        if (!Inventory.invertoryActivated)
+        {
+            CameraRotation();
+            CharacterRotation();
+        }
     }
 
     private void TryCrouch()

@@ -34,7 +34,11 @@ public class WeaponSway : MonoBehaviour
     
     void Update()
     {
-        TrySway();
+        if (!Inventory.invertoryActivated)
+        {
+            TrySway();
+        }
+        
     }
 
     private void TrySway()
