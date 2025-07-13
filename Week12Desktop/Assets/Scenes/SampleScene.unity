@@ -302,7 +302,7 @@ GameObject:
   - component: {fileID: 26315722}
   - component: {fileID: 26315721}
   - component: {fileID: 26315726}
-  m_Layer: 2
+  m_Layer: 8
   m_Name: player
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1453,7 +1453,7 @@ GameObject:
   - component: {fileID: 369057489}
   - component: {fileID: 369057491}
   - component: {fileID: 369057490}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: MuzzleFlash Inner
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6513,6 +6513,7 @@ GameObject:
   - component: {fileID: 416094344}
   - component: {fileID: 416094347}
   - component: {fileID: 416094348}
+  - component: {fileID: 416094349}
   m_Layer: 0
   m_Name: Pig
   m_TagString: NPC
@@ -6697,6 +6698,23 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &416094349
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 416094343}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e172301b38a0d874e9d38f2794f07b86, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  viewAngle: 130
+  viewDistance: 10
+  targetMask:
+    serializedVersion: 2
+    m_Bits: 256
 --- !u!1001 &419533950
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -11172,7 +11190,7 @@ GameObject:
   - component: {fileID: 1676402690}
   - component: {fileID: 1676402692}
   - component: {fileID: 1676402691}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: MuzzleFlash
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -16448,7 +16466,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1875620204}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Pickaxe Holder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -16554,7 +16572,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1980394402}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Axe Holder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -17534,7 +17552,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5715386338275399113}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: UpArm.L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -17565,7 +17583,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1966567084832030037}
-  m_Layer: 6
+  m_Layer: 2
   m_Name: DownArm.L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -17846,7 +17864,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1591150520909130483}
-  m_Layer: 6
+  m_Layer: 2
   m_Name: Armature
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -17862,7 +17880,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8272794081688281816}
-  m_Layer: 6
+  m_Layer: 2
   m_Name: DownArm.L_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -17878,7 +17896,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4485380882965309883}
-  m_Layer: 6
+  m_Layer: 2
   m_Name: DownArm.R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -17894,7 +17912,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8299767243003043416}
-  m_Layer: 6
+  m_Layer: 2
   m_Name: Gun_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -17926,7 +17944,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3003312133626200822}
   - component: {fileID: 7964209230792457190}
-  m_Layer: 6
+  m_Layer: 2
   m_Name: Cube
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -17942,7 +17960,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7045210471763497538}
-  m_Layer: 6
+  m_Layer: 2
   m_Name: DownArm.R_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -17972,7 +17990,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8471425920557417795}
-  m_Layer: 6
+  m_Layer: 2
   m_Name: UpArm.R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -18006,7 +18024,7 @@ GameObject:
   - component: {fileID: 2151681493830998419}
   - component: {fileID: 1627943821304415018}
   - component: {fileID: 1627943821304415019}
-  m_Layer: 6
+  m_Layer: 2
   m_Name: SubMachineGun1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -18248,7 +18266,7 @@ GameObject:
   m_Component:
   - component: {fileID: 387421271277063681}
   - component: {fileID: 7310346251519496479}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: arms
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -18323,7 +18341,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3304153671688779897}
-  m_Layer: 6
+  m_Layer: 2
   m_Name: Axe
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -18353,7 +18371,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5870182053524809005}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: DownArm.R_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -18369,7 +18387,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4981546459485172268}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: UpArm.R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -18387,7 +18405,7 @@ GameObject:
   - component: {fileID: 3273765128729751292}
   - component: {fileID: 2748621455100949576}
   - component: {fileID: 2748621455100949575}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Pickaxe
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -18595,7 +18613,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3878421124489230702}
   - component: {fileID: 6179255133898466928}
-  m_Layer: 6
+  m_Layer: 2
   m_Name: arms
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -18657,7 +18675,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 9215402187854570150}
-  m_Layer: 6
+  m_Layer: 2
   m_Name: UpArm.L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -18673,7 +18691,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3261925053035582681}
-  m_Layer: 6
+  m_Layer: 2
   m_Name: Gun
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -18689,7 +18707,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3168327113225275962}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: DownArm.L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -18705,7 +18723,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3446172388549032480}
-  m_Layer: 6
+  m_Layer: 2
   m_Name: Armature
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -18721,7 +18739,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1453322943376264422}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: PickAxe_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -18780,7 +18798,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1048715046094560980}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: DownArm.R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -18796,7 +18814,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4790792631088092599}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: DownArm.L_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -18855,7 +18873,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8106653157573991062}
-  m_Layer: 6
+  m_Layer: 2
   m_Name: DownArm.R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -18871,7 +18889,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4355269308326957557}
-  m_Layer: 6
+  m_Layer: 2
   m_Name: DownArm.L_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -18888,7 +18906,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7688505844552320450}
   - component: {fileID: 2904046340093161441}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Nob
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -18919,7 +18937,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 620320515154067800}
-  m_Layer: 6
+  m_Layer: 2
   m_Name: UpArm.L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -18935,7 +18953,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4569421806952907849}
-  m_Layer: 6
+  m_Layer: 2
   m_Name: Axe_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -18966,7 +18984,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6193995841945325176}
-  m_Layer: 6
+  m_Layer: 2
   m_Name: DownArm.L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -18982,7 +19000,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5899176033383661154}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Armature
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19118,7 +19136,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2819474859750293595}
-  m_Layer: 6
+  m_Layer: 2
   m_Name: Magazine_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19225,7 +19243,7 @@ GameObject:
   - component: {fileID: 6008812172242758334}
   - component: {fileID: 6352404760752222214}
   - component: {fileID: 6352404760752222213}
-  m_Layer: 6
+  m_Layer: 2
   m_Name: Axe
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19283,7 +19301,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4264720569491666542}
-  m_Layer: 6
+  m_Layer: 2
   m_Name: UpArm.R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19299,7 +19317,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3421123447757332847}
-  m_Layer: 6
+  m_Layer: 2
   m_Name: DownArm.R_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19330,7 +19348,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7427051819797295579}
   - component: {fileID: 2321981812337002699}
-  m_Layer: 6
+  m_Layer: 2
   m_Name: Cube
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19347,7 +19365,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8893821224724695619}
   - component: {fileID: 1981240722606544221}
-  m_Layer: 6
+  m_Layer: 2
   m_Name: arms
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19397,7 +19415,7 @@ GameObject:
   - component: {fileID: 7684323648372259437}
   - component: {fileID: 7057108771103629529}
   - component: {fileID: 7057108771103629528}
-  m_Layer: 6
+  m_Layer: 2
   m_Name: Hand
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19456,7 +19474,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2521300280540211157}
   - component: {fileID: 8113751645350090915}
-  m_Layer: 6
+  m_Layer: 2
   m_Name: Cube.001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19472,7 +19490,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 209683135956526781}
-  m_Layer: 6
+  m_Layer: 2
   m_Name: UpArm.R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19488,7 +19506,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1638713053129994684}
-  m_Layer: 6
+  m_Layer: 2
   m_Name: DownArm.R_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19563,7 +19581,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6833532073456804104}
   - component: {fileID: 1873202051556431896}
-  m_Layer: 6
+  m_Layer: 2
   m_Name: Cube
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19697,7 +19715,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6174862555725571834}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: PickAxe
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19713,7 +19731,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1774265231847213098}
-  m_Layer: 6
+  m_Layer: 2
   m_Name: Magazine
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19830,7 +19848,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7796534792931761835}
-  m_Layer: 6
+  m_Layer: 2
   m_Name: DownArm.L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19861,7 +19879,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5280254407029623365}
-  m_Layer: 6
+  m_Layer: 2
   m_Name: DownArm.R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19877,7 +19895,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 411695829203763494}
-  m_Layer: 6
+  m_Layer: 2
   m_Name: DownArm.L_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19907,7 +19925,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7020157141579188493}
-  m_Layer: 6
+  m_Layer: 2
   m_Name: Armature
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19923,7 +19941,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3556848958454845835}
-  m_Layer: 6
+  m_Layer: 2
   m_Name: UpArm.L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
