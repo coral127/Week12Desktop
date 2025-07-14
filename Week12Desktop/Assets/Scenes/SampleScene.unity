@@ -108,7 +108,7 @@ NavMeshSettings:
     agentTypeID: 0
     agentRadius: 0.5
     agentHeight: 2
-    agentSlope: 45
+    agentSlope: 50
     agentClimb: 0.4
     ledgeDropHeight: 0
     maxJumpAcrossDistance: 0
@@ -122,7 +122,7 @@ NavMeshSettings:
     preserveTilesOutsideBounds: 0
     debug:
       m_Flags: 0
-  m_NavMeshData: {fileID: 0}
+  m_NavMeshData: {fileID: 23800000, guid: efae7d1dface9ee4ca970abd9d9d5aa3, type: 2}
 --- !u!1001 &23015637
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6514,6 +6514,7 @@ GameObject:
   - component: {fileID: 416094347}
   - component: {fileID: 416094348}
   - component: {fileID: 416094349}
+  - component: {fileID: 416094350}
   m_Layer: 0
   m_Name: Pig
   m_TagString: WeakAnimal
@@ -6581,8 +6582,7 @@ MonoBehaviour:
   hp: 2
   walkSpeed: 2
   runSpeed: 5
-  turningSpeed: 0.01
-  direction: {x: 0, y: 0, z: 0}
+  destination: {x: 0, y: 0, z: 0}
   walkTime: 5
   waitTime: 4
   runTime: 3
@@ -6717,6 +6717,28 @@ MonoBehaviour:
   targetMask:
     serializedVersion: 2
     m_Bits: 256
+--- !u!195 &416094350
+NavMeshAgent:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 416094343}
+  m_Enabled: 1
+  m_AgentTypeID: 0
+  m_Radius: 0.5
+  m_Speed: 3.5
+  m_Acceleration: 8
+  avoidancePriority: 50
+  m_AngularSpeed: 120
+  m_StoppingDistance: 0
+  m_AutoTraverseOffMeshLink: 1
+  m_AutoBraking: 1
+  m_AutoRepath: 1
+  m_Height: 1.2
+  m_BaseOffset: 0.5
+  m_WalkableMask: 4294967295
+  m_ObstacleAvoidanceType: 4
 --- !u!1001 &419533950
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -16421,6 +16443,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1431168466}
     m_Modifications:
+    - target: {fileID: -9077512493722795151, guid: cda3e8d21cf25d748b5cfa785f40b47c, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: cda3e8d21cf25d748b5cfa785f40b47c, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -16465,9 +16491,41 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -6888777157186794345, guid: cda3e8d21cf25d748b5cfa785f40b47c, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: -5023361316794956103, guid: cda3e8d21cf25d748b5cfa785f40b47c, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: -4457394456456612008, guid: cda3e8d21cf25d748b5cfa785f40b47c, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: -2378792136721573950, guid: cda3e8d21cf25d748b5cfa785f40b47c, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: -1648498014670294708, guid: cda3e8d21cf25d748b5cfa785f40b47c, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 375517915199365746, guid: cda3e8d21cf25d748b5cfa785f40b47c, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: cda3e8d21cf25d748b5cfa785f40b47c, type: 3}
       propertyPath: m_Name
       value: normal_tree
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: cda3e8d21cf25d748b5cfa785f40b47c, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 939392968218292893, guid: cda3e8d21cf25d748b5cfa785f40b47c, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cda3e8d21cf25d748b5cfa785f40b47c, type: 3}

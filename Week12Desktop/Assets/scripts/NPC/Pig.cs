@@ -16,7 +16,7 @@ public class Pig : WeakAnimal
     private void RandomAction()
     {
         RandomSound();
-        int _random = Random.Range(3, 4); //´ë±â, Ç®¶â±â, µÎ¸®¹ø, °È±â
+        int _random = Random.Range(0, 4); //´ë±â, Ç®¶â±â, µÎ¸®¹ø, °È±â
 
         if (_random == 0)
             Wait();
@@ -24,7 +24,7 @@ public class Pig : WeakAnimal
             Eat();
         else if (_random == 2)
             Peek();
-        else
+        else if (_random == 3)
             TryWalk();
     }
 
