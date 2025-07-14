@@ -6516,7 +6516,7 @@ GameObject:
   - component: {fileID: 416094349}
   m_Layer: 0
   m_Name: Pig
-  m_TagString: NPC
+  m_TagString: WeakAnimal
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6581,18 +6581,20 @@ MonoBehaviour:
   hp: 2
   walkSpeed: 2
   runSpeed: 5
+  turningSpeed: 0.01
+  direction: {x: 0, y: 0, z: 0}
   walkTime: 5
   waitTime: 4
   runTime: 3
   anim: {fileID: 1422843618}
   rigid: {fileID: 416094345}
   boxCol: {fileID: 416094344}
-  sound_pig_normal:
+  sound_normal:
   - {fileID: 8300000, guid: b6ddd1c7377535d4a89b37f7a809aee7, type: 3}
   - {fileID: 8300000, guid: 30b8d606807a22c41a058293ee0dad16, type: 3}
   - {fileID: 8300000, guid: fbc840ca1dddef349899ba552f5ecf84, type: 3}
-  sound_pig_Hurt: {fileID: 8300000, guid: 133c7a9aa27f0294c97230d018b5d579, type: 3}
-  soung_pig_Dead: {fileID: 8300000, guid: b5a46e38aee67624d82a0e3f27234c3a, type: 3}
+  sound_Hurt: {fileID: 8300000, guid: 133c7a9aa27f0294c97230d018b5d579, type: 3}
+  soung_Dead: {fileID: 8300000, guid: b5a46e38aee67624d82a0e3f27234c3a, type: 3}
 --- !u!82 &416094348
 AudioSource:
   m_ObjectHideFlags: 0
@@ -9175,6 +9177,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentCloseWeapon: {fileID: 7057108771103629528}
+  layerMask:
+    serializedVersion: 2
+    m_Bits: 243
 --- !u!114 &1198762063
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9189,6 +9194,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currentGun: {fileID: 1627943821304415018}
   isFineSightMode: 0
+  layerMask:
+    serializedVersion: 2
+    m_Bits: 243
   theCam: {fileID: 963194227}
   hit_effect_prefab: {fileID: 1214234120321803306, guid: 9c2ec0ad8719d984e96d627885ea8931, type: 3}
 --- !u!82 &1198762064
@@ -9343,6 +9351,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentCloseWeapon: {fileID: 6352404760752222214}
+  layerMask:
+    serializedVersion: 2
+    m_Bits: 243
 --- !u!114 &1198762068
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9356,6 +9367,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentCloseWeapon: {fileID: 2748621455100949576}
+  layerMask:
+    serializedVersion: 2
+    m_Bits: 243
 --- !u!1 &1209558071
 GameObject:
   m_ObjectHideFlags: 0

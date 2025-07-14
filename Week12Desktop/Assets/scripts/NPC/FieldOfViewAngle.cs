@@ -47,7 +47,7 @@ public class FieldOfViewAngle : MonoBehaviour
 
                 if(_angle < viewAngle * 0.5f)
                 {
-                    RaycastCommand _hit;
+                    RaycastHit _hit;
                     if (Physics.Raycast(transform.position + transform.up, _direction, out _hit, viewDistance))
                     {
                         if(_hit.transform.name == "Player")
